@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brigadeiro 🍫</title>
+    <style>
+      html {
+        height: 100%;
+        background: linear-gradient(180deg, #fae2eb9a 3%, #fae2eb 97%);
+      }
+
+      h1 {
+        text-align: center;
+        color: #723c32;
+        margin: 0 auto;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        line-height: 1.15;
+        font-size: 14px;
+        text-align: justify;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        background-color: #fae2eb;
+        border: 1px solid #de759b;
+        border-radius: 20px;
+        color: #723c32;
+        font-size: 14px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #de759b;
+        color: white;
+      }
+
+      hr {
+        border: 0.5px dashed #723c32;
+        opacity: 0.5;
+      }
+      .container {
+        max-width: 600px;
+        margin: 2% auto;
+        padding: 1% 3%;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .learn-more {
+        display: block;
+        margin-top: 10px;
+        color: #de759b;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .marina-link {
+        color: #de759b;
+        text-decoration: none;
+      }
+
+      .marina-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I ❤️ Brigadeiro</h1>
+      <h2>Specially on <em>rainy</em> days 🌧</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/081/original/receita-de-brigadeiro-tradicional.jpeg?1647100485"
+        alt="brigadeiro"
+      />
+      <p>
+        The brigadeiro is a <strong>traditional Brazilian dessert</strong>. It
+        is made of condensed milk, cocoa powder, butter, and chocolate sprinkles
+        covering the outside layer. It is a popular confection throughout the
+        country, especially for festive events. Brigadeiros are commonly made at
+        home, and also found in bakeries and snack shops. A brigadeiro is
+        generally shaped into small balls covered in chocolate sprinkles and
+        placed in a small cupcake liner.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Brigadeiro"
+          target="_blank"
+          class="learn-more"
+          >Learn more on Wikipedia
+        </a>
+      </p>
+      <button class="buy-button">Buy Brigadeiro 😋</button>
+      <hr />
+      <p class="footer">
+        Made with 💖 by
+        <span>
+          <a
+            href="https://www.linkedin.com/in/marinavianna13/"
+            target="_blank"
+            class="marina-link"
+          >
+            Marina Vianna
+          </a>
+        </span>
+      </p>
+    </div>
+    <script>
+      function buyBrigadeiro() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your e-mail adress?");
+        verifyNumBrigadeiro(name);
+      }
+
+      function verifyNumBrigadeiro(name) {
+        let num_brigadeiro = prompt(
+          "How many brigadeiros do you want to order? 😋"
+        );
+
+        if (num_brigadeiro > 300) {
+          alert(
+            `OMG, ${name}! 🙀 The maximum number of brigadeiros per order is 300. Please enter the quantity again.`
+          );
+          return verifyNumBrigadeiro(name);
+        } else {
+          alert(
+            `Thank you, ${name}. The brigadeiros will be coming soon... 😋💭🍫`
+          );
+        }
+      }
+
+      let buybutton = document.querySelector(".buy-button");
+      buybutton.addEventListener("click", buyBrigadeiro);
+    </script>
+  </body>
+</html>
